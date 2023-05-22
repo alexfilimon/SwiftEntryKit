@@ -26,6 +26,15 @@ class EKWindow: UIWindow {
         backgroundColor = .clear
         rootViewController = rootVC
         accessibilityViewIsModal = true
+
+        if let customTintColor = SwiftEntryKit.tintColor {
+            tintColor = customTintColor
+        }
+        if #available(iOS 13.0, *) {
+            if let overrided = SwiftEntryKit.overridedUserInterfaceStyle as? UIUserInterfaceStyle {
+                overrideUserInterfaceStyle = overrided
+            }
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

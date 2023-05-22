@@ -167,4 +167,7 @@ public final class SwiftEntryKit {
             }
         }
     }
+
+    public static var tintColor: UIColor?
+    public static var overridedUserInterfaceStyle: Any?
 }
